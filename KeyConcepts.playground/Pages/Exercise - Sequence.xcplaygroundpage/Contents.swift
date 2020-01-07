@@ -32,6 +32,25 @@ let grey = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
 let lightBlue = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
 let lightRed = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
 
+//set the canvas colour
+canvas.fillColor = grey
+canvas.drawRectangle(at: Point(x: 0,y: 0), width: 400, height: 600)
+
+//print the reference lines
+for shuline in 1...7{
+    canvas.drawLine(from: Point(x: shuline * 50,y: 0), to: Point(x: shuline * 50,y: 600))
+}
+
+for hengline in 1...11{
+    canvas.drawLine(from: Point(x: 0,y: hengline * 50), to: Point(x: 400,y: hengline * 50))
+}
+
+//print title
+canvas.drawText(message: "the jesus", at: Point(x:12,y:440), size: 40)
+canvas.drawText(message: "and mary chain", at: Point(x:12,y:395), size: 40)
+
+//
+
 // HINT: Remember that all shapes have a fill and a border.
 //       You can turn off the fill or border if desired.
 
@@ -44,6 +63,7 @@ canvas.drawEllipse(at: Point(x: 100, y: 100), width: 50, height: 75)
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
 canvas.drawEllipse(at: Point(x: 200, y: 100), width: 50, height: 75)
+
 
 
 /*:
